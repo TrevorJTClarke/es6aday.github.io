@@ -1,0 +1,14 @@
+/* TEAM */
+Creator: Trevor Clarke
+Contact: sum37apps@gmail.com
+Twitter: trevorjtclarke
+Location: Irvine, CA
+                           
+/* THANKS */                           
+Creator of Balzac theme: Cole Townsend
+Twitter: @twnsndco
+
+/* SITE */                         
+Last update: 2015-05-12
+Standards: HTML, SCSS, Jekyll                        
+Software: git

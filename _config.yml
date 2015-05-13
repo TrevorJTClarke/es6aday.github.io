@@ -1,0 +1,16 @@
+# Site settings
+title: ES6 A Day
+email: sum37apps@gmail.com
+description: Challenge yourself to learn a tiny bit of ES6 everyday.
+baseurl: "/"
+url: "http://es6aday.com"
+paginate:         5
+
+# Custom vars
+version:          0.0.1
+
+twitter_username: trevorjtclarke
+github_username:  trevorjtclarke
+author:
+  name:           'Trevor Clarke'
+  url:            https://github.com/trevorjtclarke

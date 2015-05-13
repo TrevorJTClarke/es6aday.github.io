@@ -1,7 +1,8 @@
 ---
-layout: home
+layout: post
 title: "Recent Posts"
 tags: [Jekyll, theme, responsive, blog, template]
 image:
-  feature: typewriter.jpg
+  feature: es6.png
 ---
+<!-- layout: home -->

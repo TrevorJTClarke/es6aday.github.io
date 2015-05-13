@@ -1,14 +1,14 @@
 
 
 <meta charset="utf-8">
-<title>Test Post &#8211; ES6 A Day</title>
-<meta name="description" content="Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage.">
+<title>w00t! &#8211; ES6 A Day</title>
+<meta name="description" content="Some test post or something">
 <meta name="keywords" content="">
 
 
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Test Post &#8211; ES6 A Day">
-<meta property="og:description" content="Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schli...">
+<meta property="og:title" content="w00t! &#8211; ES6 A Day">
+<meta property="og:description" content="Some test post or something">
 <meta property="og:url" content="/articles/test-post">
 <meta property="og:site_name" content="ES6 A Day">
 
@@ -74,29 +74,35 @@
     </header>
 
 
-<section class="article">
+<section class="article pad-top">
 
-  <div class="overlay overlay-lighter"></div>
-  <div class="featured-image" style="background-image: url(/images/soft-trees.jpg)"></div>
 
 
 
       <article class="wrap post">
         <header class="post-header">
           <hgroup>
-            <h1>Test Post</h1>
+            <h1>w00t!</h1>
             <p class="date">Aug 17, 2013</p>
-            <p class="intro">Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage.</p>
+            <p class="intro">Some test post or something</p>
           </hgroup>
         </header>
 
-        <p>Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.</p>
+        <p>Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl</p>
 
-<p>Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">ApiProto</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">createEndpoints</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">paths</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">_self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+
+    <span class="nx">paths</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">path</span><span class="p">,</span><span class="nx">idx</span><span class="p">){</span>
+        <span class="nx">_self</span><span class="p">.</span><span class="nx">createFn</span><span class="p">(</span><span class="s2">&quot;ApiProto&quot;</span><span class="p">,</span> <span class="nx">path</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s1">&#39;{ this.apiString += (id) ? &quot;/&#39;</span> <span class="o">+</span> <span class="nx">path</span> <span class="o">+</span> <span class="s1">&#39;/&quot; + id : &quot;/&#39;</span> <span class="o">+</span> <span class="nx">path</span> <span class="o">+</span> <span class="s1">&#39;&quot;; return this; }&#39;</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">_A</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ApiProto</span><span class="p">();</span></code></pre></div>
 
 
 
-      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;Test Post&quot;%20http://es6aday.com/articles/test-post%20via%20&#64;trevorjtclarke" data-dnt="true">Share</a>
+      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;w00t!&quot;%20http://es6aday.com/articles/test-post%20via%20&#64;trevorjtclarke" data-dnt="true">Share</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
       
@@ -112,7 +118,7 @@
         <p class="list-title">Recent Posts</p>
          <!-- for1 -->
             <li>
-              <span class="recent-title"><a href="/articles/test-post" title="Test Post">Test Post </a></span>
+              <span class="recent-title"><a href="/articles/test-post" title="w00t!">w00t! </a></span>
               <span class="date">Aug 17, 2013</span>
             </li>
          <!-- for1 -->
@@ -141,7 +147,7 @@
         </ul>
     </div>
     </aside>
-    <small>&copy; 2015 Trevor Clarke</small>
+    <small>&copy; 2015 Sum 37</small>
   </footer>
 
   <!-- If they're out, get some from the cellar -->

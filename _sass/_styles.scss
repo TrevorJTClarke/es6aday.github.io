@@ -80,6 +80,7 @@ code {
         color: $white;
         font-family: "Monaco", "Courier New", "Courier";
         font-size: .9em;
+        line-height: 1.25em;
         .lineno {
             margin-right: $lh/2;
             color: $grey-light;
@@ -257,7 +258,7 @@ header.site-header nav {
     position: relative;
     margin-left: 20px; 
     a {
-        color: white;
+        // color: white;
         @include transit(all, .2s, ease);
         &:hover {
             @include tshd(0, 0, 3px, rgba(255,255,255,.6));
@@ -306,6 +307,10 @@ header.site-header nav {
         z-index: -1;
         img {
             max-height: 800px;
+        }
+
+        &.main-feat {
+            background-size:75%;
         }
     }
     

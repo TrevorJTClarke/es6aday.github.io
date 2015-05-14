@@ -1,9 +1,10 @@
 ---
 layout: post-light-feature
 title: Arrows and Lexical "this"
-description: "A study into accessing \"this\" within the new lexical structure, and arrow functions."
+description: A study into accessing "this" within the new lexical structure, and arrow functions.
 categories: articles
 date: 2015-05-13
+reference: https://babeljs.io/docs/learn-es6/#arrows
 ---
 In trying to understand use cases of "this", I setup the following scenarios:
 

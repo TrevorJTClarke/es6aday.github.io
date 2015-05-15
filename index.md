@@ -1,7 +1,6 @@
 ---
 layout: main
-title: "Recent Posts"
-tags: [Jekyll, theme, responsive, blog, template]
+tags: [ES6, blog, Javascript]
 comments: true
 image:
   feature: yellow_triangles.png

@@ -6,7 +6,8 @@ body {
   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
   -moz-osx-font-smoothing: grayscale; /* Fix for Mozilla */
   text-size-adjust: 100%;
-  background: $white;
+  // background: $white;
+  background: #f6f6f6;
   min-height: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -144,6 +145,34 @@ input {
     padding-top: $lh*2;
 }
 
+.logo {
+    position: relative;
+    background: url('/images/logo.svg') left top no-repeat;
+    width: 100%;
+    height: 32vh;
+    padding: 0;
+    top: 0px;
+    left: 50%;
+    margin: 0 0 0 -14vh;
+}
+
+.preface {
+    padding: 60px 0 0;
+
+    h1 {
+        margin: 35px 0 0 0;
+        text-align: center;
+        font-size: 44px;
+
+        del {
+
+        }
+        i {
+            font-style: italic;
+        }
+    }
+}
+
 /************ Layout *************/
 
 #bump {
@@ -203,11 +232,11 @@ header.site-header {
       nav ul li a {
             color: $black;
             &:active {
-              color: $link;  
+              color: $black;  
             }
             &:hover {
                 text-shadow: none;
-                color: $link;
+                color: $black;
             }
         }
 
@@ -218,7 +247,8 @@ header.site-header a.menu {
   display: none;
 }
 
-header.site-header hgroup h1, header.site-header nav ul {
+header.site-header hgroup h1, 
+header.site-header nav ul {
   font-family: $sans;
 }
 header.site-header hgroup {
@@ -228,16 +258,15 @@ header.site-header hgroup {
       font-weight: 700;
       font-size: 18px;
       line-height: 100%;
-      color: $accent;
+      color: $black;
       letter-spacing: 2px;
       text-transform: uppercase;
   }
   a {
-      color: #fff;
+      color: $black;
       @include transit(all, .2s, ease);
 
       &:hover {
-        @include tshd(0, 0, 3px, rgba(255,255,255,.6));
         @include transit(all, .2s, ease);
       }
   }
@@ -310,7 +339,10 @@ header.site-header nav {
         }
 
         &.main-feat {
-            background-size:75%;
+            height: 70vh;
+            // background: url("/images/yellow_triangles.png") left top repeat;
+            // background-size:75%;
+            background: #F9F0C1;
         }
     }
     
@@ -337,6 +369,14 @@ header.site-header nav {
             text-align: left;
         }
     }
+}
+
+
+h1.featured-h1 {
+    padding: 40vh 0 0;
+    text-align: center;
+    font-size: 109px;
+    color: $white;
 }
 
 // Archive Page

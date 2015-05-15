@@ -26,12 +26,15 @@ function asyncFn (name = "George") {
     
     // return a promise
     return new Promise((res, err) => {
-        // a dirty way to call the resolve
+        // a bad, but quick way to call the resolve
         res(resolve())
     })
 }
+{% endhighlight %}
 
+The function is now setup to be re-usable, with the .then() and .catch methods:
 
+{% highlight js %}
 asyncFn("Abe").then(res => {
       // This should say Abe Lincoln
       console.log("Resolved:", res)
@@ -48,4 +51,10 @@ asyncFn("Abe").then(res => {
 
 ### Findings:
 
-  - 
+* Simplicity of adding a promise to a function is **wonderful**
+* The best repeatable structure should be *carefully considered*
+
+### References:
+
+* [ES6 Promise API](http://www.2ality.com/2014/10/es6-promises-api.html)
+* [ES6 Promise Debugging](https://github.com/soareschen/es6-promise-debugging)

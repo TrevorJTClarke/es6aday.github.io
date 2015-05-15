@@ -107,13 +107,14 @@
     
     <span class="c1">// return a promise</span>
     <span class="k">return</span> <span class="k">new</span> <span class="nx">Promise</span><span class="p">((</span><span class="nx">res</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-        <span class="c1">// a dirty way to call the resolve</span>
+        <span class="c1">// a bad, but quick way to call the resolve</span>
         <span class="nx">res</span><span class="p">(</span><span class="nx">resolve</span><span class="p">())</span>
     <span class="p">})</span>
-<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
 
+<p>The function is now setup to be re-usable, with the .then() and .catch methods:</p>
 
-<span class="nx">asyncFn</span><span class="p">(</span><span class="s2">&quot;Abe&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">asyncFn</span><span class="p">(</span><span class="s2">&quot;Abe&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="c1">// This should say Abe Lincoln</span>
       <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resolved:&quot;</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span>
   <span class="p">},</span> <span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -129,7 +130,15 @@
 <h3 id="findings">Findings:</h3>
 
 <ul>
-  <li></li>
+  <li>Simplicity of adding a promise to a function is <strong>wonderful</strong></li>
+  <li>The best repeatable structure should be <em>carefully considered</em></li>
+</ul>
+
+<h3 id="references">References:</h3>
+
+<ul>
+  <li><a href="http://www.2ality.com/2014/10/es6-promises-api.html">ES6 Promise API</a></li>
+  <li><a href="https://github.com/soareschen/es6-promise-debugging">ES6 Promise Debugging</a></li>
 </ul>
 
 
@@ -147,6 +156,11 @@
     <aside class="wrap">
       <ol class="prev-posts">
         <p class="list-title">Recent Posts</p>
+         <!-- for1 -->
+            <li>
+              <span class="recent-title"><a href="/articles/Epic-Function-Variables" title="Epic Function Variables: Spread">Epic Function Variables: Sp... </a></span>
+              <span class="date">May 15, 2015</span>
+            </li>
          <!-- for1 -->
             <li>
               <span class="recent-title"><a href="/articles/Promises-Part-1" title="Promises, Part 1">Promises, Part 1 </a></span>

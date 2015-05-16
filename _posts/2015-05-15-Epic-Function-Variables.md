@@ -3,6 +3,8 @@ layout: post-light-feature
 title: "Epic Function Variables: Spread"
 description: This probably just made things more awesome. I'm tired of implied "arguments" and the rigidity of variables passed into functions.
 categories: articles
+tags: [ES6, blog, Javascript, Variables, Spread, JS Variables]
+comments: true
 date: 2015-05-15
 reference: https://babeljs.io/docs/learn-es6/#default-rest-spread
 fnpreview: "fn(...[2,3,4])"

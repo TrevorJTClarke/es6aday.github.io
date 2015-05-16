@@ -3,6 +3,8 @@ layout: post-light-feature
 title: Promises, Part 1
 description: Scraping the surface of promises
 categories: articles
+tags: [ES6, blog, Javascript, Promises, JS, JS Promises]
+comments: true
 date: 2015-05-14
 reference: http://www.2ality.com/2014/10/es6-promises-api.html, https://github.com/soareschen/es6-promise-debugging
 fnpreview: "new Promise((res, err) => {})"

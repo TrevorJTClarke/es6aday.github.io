@@ -3,6 +3,8 @@ layout: post-light-feature
 title: Arrows and Lexical "this"
 description: A study into accessing "this" within the new lexical structure, and arrow functions.
 categories: articles
+tags: [ES6, blog, Javascript, Arrows, Lexical]
+comments: true
 date: 2015-05-13
 reference: https://babeljs.io/docs/learn-es6/#arrows
 fnpreview: "((v, i) => { return v + i })"

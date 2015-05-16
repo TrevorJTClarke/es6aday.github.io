@@ -5,6 +5,7 @@ description: Scraping the surface of promises
 categories: articles
 date: 2015-05-14
 reference: http://www.2ality.com/2014/10/es6-promises-api.html, https://github.com/soareschen/es6-promise-debugging
+fnpreview: "new Promise((res, err) => {})"
 ---
 A quick look into the Promise setup. This simple example shows how there are many ways to utilize promises.
 

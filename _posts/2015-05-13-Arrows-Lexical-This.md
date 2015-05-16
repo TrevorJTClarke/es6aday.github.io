@@ -5,6 +5,7 @@ description: A study into accessing "this" within the new lexical structure, and
 categories: articles
 date: 2015-05-13
 reference: https://babeljs.io/docs/learn-es6/#arrows
+fnpreview: "((v, i) => { return v + i })"
 ---
 In trying to understand use cases of "this", I setup the following scenarios:
 

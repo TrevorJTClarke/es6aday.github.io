@@ -1,0 +1,60 @@
+/* Featured Sections */
+.ft-challenge {
+	max-width: 960px;
+	@include column(6);
+	display: block;
+    float: none;
+    margin: 0 auto;
+    @include clearfix;
+    // overflow: hidden;
+
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    @include columnMarginLeft(6);
+}
+
+.ft-timer-lg {
+	background: $black;
+	border: 1px solid rgba(0,0,0,0.6);
+	@include br(4px);
+	@include bxshd(0, 1px, 10px, rgba(0,0,0,0.2));
+	color: $white;
+}
+
+.ft-timer-count {
+	padding: 0 0 15px 10px;
+
+	h3 {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 60px;
+		margin: 10px;
+		position: relative;
+
+		span {
+			position: absolute;
+			bottom: -9px;
+			left: 0;
+			font-size: 14px;
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	i {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 60px;
+		margin: 10px;
+	}
+
+	.btn-start {
+		background: rgba(0,0,0,0.3);
+		box-sizing: border-box;
+		font-size: 37px;
+		font-family: "Calendas Plus","Crimson Text","Hoefler Text","Georgia",serif;
+		padding: 22px 46px;
+		float: right;
+	}
+}

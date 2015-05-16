@@ -1,0 +1,203 @@
+
+
+<meta charset="utf-8">
+<title>Promises, Part 1 &#8211; ES6 A Day</title>
+<meta name="description" content="Scraping the surface of promises">
+<meta name="keywords" content="">
+
+
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Promises, Part 1 &#8211; ES6 A Day">
+<meta property="og:description" content="Scraping the surface of promises">
+<meta property="og:url" content="/articles/Promises-Part-1">
+<meta property="og:site_name" content="ES6 A Day">
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="ES6 A Day Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Type -->
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" rel='stylesheet' type='text/css' />
+<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/assets/css/entypo.css" media="all">
+
+<!-- In order to use Calendas Plus, you must first purchase it. Then, create a font-face package using FontSquirrel.
+<link rel='stylesheet' href='/assets/cal.css' media='all' />
+-->
+
+
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/i.css">
+
+<!-- Fresh Squeezed jQuery -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+
+<div id="bump">
+  <body class="">
+    <header class="site-header darken">
+      <div class="wrap">
+        <hgroup>
+          <h1><a href="/">ES6 A Day</a></h1>
+        </hgroup>
+        <a href="#nav" class="menu"><span class='icons'>☰</span></a>
+        <nav role="navigation">
+          <ul>
+            <li>
+              <a href="/" title="ES6 A Day">Home</a>
+            </li>
+            
+            
+                <li><a href="/about" >About</a></li>
+            
+                <li><a href="https://github.com/sum37/es6aday.github.io" target="_blank">Collaborate!</a></li>
+            
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+<section class="article pad-top">
+
+
+
+
+      <article class="wrap post">
+        <header class="post-header">
+          <hgroup>
+            <h1>Promises, Part 1</h1>
+            <p class="date">May 14, 2015</p>
+            <p class="intro">Scraping the surface of promises</p>
+          </hgroup>
+        </header>
+
+        <p>A quick look into the Promise setup. This simple example shows how there are many ways to utilize promises.</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// declare a function and assign a promise, dont let our data be empty</span>
+<span class="kd">function</span> <span class="nx">asyncFn</span> <span class="p">(</span><span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;George&quot;</span><span class="p">)</span> <span class="p">{</span>
+    
+    <span class="c1">// define something to do</span>
+    <span class="kd">var</span> <span class="nx">resolve</span> <span class="o">=</span> <span class="p">(</span><span class="nx">f</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// we know this is Abe now</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">return</span> <span class="nx">name</span> <span class="o">+=</span> <span class="s2">&quot; Lincoln&quot;</span>
+    <span class="p">})</span>
+
+    <span class="c1">// handle some rejection</span>
+    <span class="kd">var</span> <span class="nx">reject</span> <span class="o">=</span> <span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;rejected&quot;</span><span class="p">)</span>
+    <span class="p">})</span>
+    
+    <span class="c1">// return a promise</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">Promise</span><span class="p">((</span><span class="nx">res</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// a bad, but quick way to call the resolve</span>
+        <span class="nx">res</span><span class="p">(</span><span class="nx">resolve</span><span class="p">())</span>
+    <span class="p">})</span>
+<span class="p">}</span></code></pre></div>
+
+<p>The function is now setup to be re-usable, with the .then() and .catch methods:</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">asyncFn</span><span class="p">(</span><span class="s2">&quot;Abe&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="c1">// This should say Abe Lincoln</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resolved:&quot;</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span>
+  <span class="p">},</span> <span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span>
+          <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+      <span class="p">}</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="c1">// an error happened somewhere inside the promise chain</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;ERROR Caught:&quot;</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+  <span class="p">})</span></code></pre></div>
+
+<h3 id="findings">Findings:</h3>
+
+<ul>
+  <li>Simplicity of adding a promise to a function is <strong>wonderful</strong></li>
+  <li>The best repeatable structure should be <em>carefully considered</em></li>
+</ul>
+
+<h3 id="references">References:</h3>
+
+<ul>
+  <li><a href="http://www.2ality.com/2014/10/es6-promises-api.html">ES6 Promise API</a></li>
+  <li><a href="https://github.com/soareschen/es6-promise-debugging">ES6 Promise Debugging</a></li>
+</ul>
+
+
+      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;Promises, Part 1&quot;%20http://es6aday.com/articles/Promises-Part-1%20via%20&#64;trevorjtclarke" data-dnt="true">Share</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      
+
+      </article>
+    </section>
+</div>
+
+<div class="push"></div>
+  <footer>
+    <aside class="wrap">
+      <ol class="prev-posts">
+        <p class="list-title">Recent Posts</p>
+         <!-- for1 -->
+            <li>
+              <span class="recent-title"><a href="/articles/Epic-Function-Variables" title="Epic Function Variables: Spread">Epic Function Variables: Sp... </a></span>
+              <span class="date">May 15, 2015</span>
+            </li>
+         <!-- for1 -->
+            <li>
+              <span class="recent-title"><a href="/articles/Promises-Part-1" title="Promises, Part 1">Promises, Part 1 </a></span>
+              <span class="date">May 14, 2015</span>
+            </li>
+         <!-- for1 -->
+            <li>
+              <span class="recent-title"><a href="/articles/Arrows-Lexical-This" title="Arrows and Lexical "this"">Arrows and Lexical "this" </a></span>
+              <span class="date">May 13, 2015</span>
+            </li>
+        
+      </ol>
+
+      <div class="social">
+        <ul>
+            <li><a id="mail" href="mailto:sum37apps@gmail.com"><span class="foot-link">Contact Me</span></a></li>
+
+            
+            <li><a id="twit" href="http://twitter.com/trevorjtclarke" target="_blank"><span class="foot-link">@trevorjtclarke</span></a></li>
+            
+
+
+            
+        </ul>
+    </div>
+    </aside>
+    <small>&copy; 2015 Sum 37</small>
+  </footer>
+
+  <!-- If they're out, get some from the cellar -->
+  <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="/assets/js/retina.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="/assets/js/scripts.js"></script>
+
+
+  </body>
+</html>
+

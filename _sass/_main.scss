@@ -1,0 +1,59 @@
+/* Home Page styling */
+.main-posts {
+    max-width: 960px;
+    @include column(10);
+    display: block;
+    float: none;
+    margin: 80px auto 0;
+    @include clearfix;
+    overflow: hidden;
+
+    h2 {
+    	text-align: center;
+    	margin: 0 0 40px;
+    }
+}
+
+.post-item {
+	background: $white;
+	border: 1px solid rgba(0,0,0,0.1);
+	@include br(4px);
+	@include column(3.2);
+	display:inline-block;
+	vertical-align:top;
+	padding:0;
+	min-height: 210px;
+
+	.snippet {
+		display: block;
+		margin: -1px -1px 0;
+
+		.highlight {
+			border-radius: 4px 4px 0 0;
+		}
+	}
+
+	.recent-title {
+		padding: 0 20px 10px;
+		display: block;
+		font-size: 36px;
+		line-height: 41px;
+
+		a {
+		    color: $black;
+		    display: block;
+
+		    &:hover {
+		        color: $grey-medium;
+		    }
+		}
+	}
+
+	.date {
+		color: $grey-light;
+		display: block;
+		width: 100%;
+		text-align: right;
+		padding: 10px;
+	}
+}

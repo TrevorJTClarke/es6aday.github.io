@@ -1,11 +1,11 @@
 ---
-layout: page
+layout: post
+permalink: /about/index.html
 title: About
-permalink: /about/
+description: ES6 is a tremendous update to javascript, and for that matter a fresh look at the build mindset. The time and focus of simply spending 30 minutes a day to learn the new changes, keeps you agile.
+tags: [about, Jekyll, theme, responsive]
+image:
+  feature: yellow_triangles.png
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
-
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+Coming soon :)

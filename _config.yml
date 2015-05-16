@@ -54,3 +54,8 @@ permalink:   /:categories/:title
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
+
+
+# FOR HELP/CONFIG:
+# https://github.com/ColeTownsend/Balzac-for-Jekyll
+# http://jekyll.gtat.me/

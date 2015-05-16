@@ -1,0 +1,189 @@
+
+
+<meta charset="utf-8">
+<title>Epic Function Variables: Spread &#8211; ES6 A Day</title>
+<meta name="description" content="This probably just made things more awesome. I'm tired of implied "arguments" and the rigidity of variables passed into functions.">
+<meta name="keywords" content="">
+
+
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Epic Function Variables: Spread &#8211; ES6 A Day">
+<meta property="og:description" content="This probably just made things more awesome. I'm tired of implied "arguments" and the rigidity of variables passed in...">
+<meta property="og:url" content="/articles/Epic-Function-Variables">
+<meta property="og:site_name" content="ES6 A Day">
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="ES6 A Day Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Type -->
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" rel='stylesheet' type='text/css' />
+<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/assets/css/entypo.css" media="all">
+
+<!-- In order to use Calendas Plus, you must first purchase it. Then, create a font-face package using FontSquirrel.
+<link rel='stylesheet' href='/assets/cal.css' media='all' />
+-->
+
+
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/i.css">
+
+<!-- Fresh Squeezed jQuery -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+
+<div id="bump">
+  <body class="">
+    <header class="site-header darken">
+      <div class="wrap">
+        <hgroup>
+          <h1><a href="/">ES6 A Day</a></h1>
+        </hgroup>
+        <a href="#nav" class="menu"><span class='icons'>☰</span></a>
+        <nav role="navigation">
+          <ul>
+            <li>
+              <a href="/" title="ES6 A Day">Home</a>
+            </li>
+            
+            
+                <li><a href="/about" >About</a></li>
+            
+                <li><a href="https://github.com/sum37/es6aday.github.io" target="_blank">Collaborate!</a></li>
+            
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+<section class="article pad-top">
+
+
+
+
+      <article class="wrap post">
+        <header class="post-header">
+          <hgroup>
+            <h1>Epic Function Variables: Spread</h1>
+            <p class="date">May 15, 2015</p>
+            <p class="intro">This probably just made things more awesome. I'm tired of implied "arguments" and the rigidity of variables passed into functions.</p>
+          </hgroup>
+        </header>
+
+        <p>Functions with spread variables, there are so many use cases where this could be helpful.</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// setup the function as if you have 3 set variables</span>
+<span class="kd">function</span> <span class="nx">getSpread</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">z</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// just add</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span> <span class="o">+</span> <span class="nx">z</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// Pass each elem of array as argument</span>
+<span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nx">getSpread</span><span class="p">(...[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="c1">// returns 9</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Spread&quot;</span><span class="p">,</span> <span class="nx">s</span><span class="p">)</span></code></pre></div>
+
+<h3 id="findings">Findings:</h3>
+
+<ul>
+  <li>I have used rigid variables for many purposes, but the flexibility given here means I can pass in an Array rather than an Object or single variable. Only problem here is having to account for a missing/undefined item.</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Before:</span>
+<span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Example Options Object&quot;</span><span class="p">,</span>
+  <span class="nx">left</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">totalRecords</span><span class="o">:</span> <span class="mi">43</span>
+<span class="p">};</span>
+
+<span class="c1">// Now:             x                     y   z</span>
+<span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Example Options Object&quot;</span><span class="p">,</span><span class="kc">true</span><span class="p">,</span><span class="mi">43</span><span class="p">]</span>
+<span class="c1">// Inside the function, each item becomes its own variable </span>
+<span class="c1">// Instead of accessing from an array by: arrayData[0]</span>
+<span class="c1">//    -&gt; access by y = true</span></code></pre></div>
+
+<h3 id="references">References:</h3>
+
+<ul>
+  <li><a href="https://babeljs.io/docs/learn-es6/#default-rest-spread">Babeljs</a></li>
+</ul>
+
+
+      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;Epic Function Variables: Spread&quot;%20http://es6aday.com/articles/Epic-Function-Variables%20via%20&#64;trevorjtclarke" data-dnt="true">Share</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      
+
+      </article>
+    </section>
+</div>
+
+<div class="push"></div>
+  <footer>
+    <aside class="wrap">
+      <ol class="prev-posts">
+        <p class="list-title">Recent Posts</p>
+         <!-- for1 -->
+            <li>
+              <span class="recent-title"><a href="/articles/Epic-Function-Variables" title="Epic Function Variables: Spread">Epic Function Variables: Sp... </a></span>
+              <span class="date">May 15, 2015</span>
+            </li>
+         <!-- for1 -->
+            <li>
+              <span class="recent-title"><a href="/articles/Promises-Part-1" title="Promises, Part 1">Promises, Part 1 </a></span>
+              <span class="date">May 14, 2015</span>
+            </li>
+         <!-- for1 -->
+            <li>
+              <span class="recent-title"><a href="/articles/Arrows-Lexical-This" title="Arrows and Lexical "this"">Arrows and Lexical "this" </a></span>
+              <span class="date">May 13, 2015</span>
+            </li>
+        
+      </ol>
+
+      <div class="social">
+        <ul>
+            <li><a id="mail" href="mailto:sum37apps@gmail.com"><span class="foot-link">Contact Me</span></a></li>
+
+            
+            <li><a id="twit" href="http://twitter.com/trevorjtclarke" target="_blank"><span class="foot-link">@trevorjtclarke</span></a></li>
+            
+
+
+            
+        </ul>
+    </div>
+    </aside>
+    <small>&copy; 2015 Sum 37</small>
+  </footer>
+
+  <!-- If they're out, get some from the cellar -->
+  <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="/assets/js/retina.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="/assets/js/scripts.js"></script>
+
+
+  </body>
+</html>
+

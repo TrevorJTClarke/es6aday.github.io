@@ -1,0 +1,44 @@
+{% include head-dark.html %}
+
+<section class="article">
+    <div class="featured-image main-feat">
+        <div class="preface">
+            <div class="logo"></div>
+            <!-- <h1>Become The Expert <del>Today</del> <i>Now!</i></h1> -->
+            <h1>The Challenge:</h1>
+        </div>
+        <div class="ft-challenge">
+            <div class="ft-timer-lg">
+                <div class="ft-timer-icn"></div>
+                <div class="ft-timer-count">
+                    <h3>30<span>Minutes</span></h3>
+                    <i>:</i>
+                    <h3>00<span>Seconds</span></h3>
+                    <i>:</i>
+                    <h3>00<span>Milliseconds</span></h3>
+                    <button class="btn btn-start">Start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <article class="main-posts">
+        <h2>Recent Posts</h2>
+        {% for post in site.posts | limit:6 %}
+        <div class="post-item">
+<!-- <span class="snippet">{{post.fnpreview}}</span> -->
+<span class="snippet">
+{% highlight js %}
+{{post.fnpreview}}
+{% endhighlight %}
+</span>
+            <span class="recent-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title | strip_html | strip_newlines | truncate: 30 }} </a></span>
+            <span class="date">{{post.date | date: "%b %d, %Y" }}</span>
+        </div>
+        {% endfor %}
+    </article>
+
+</section>
+<!-- </div> -->
+
+{% include footer.html %}

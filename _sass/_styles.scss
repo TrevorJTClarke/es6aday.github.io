@@ -203,7 +203,7 @@ input {
 
 header.site-header {
   padding: 20px 0;
-  position: absolute;
+  position: relative;
   width: 100%;
   z-index: 5000;
   
@@ -689,6 +689,12 @@ footer {
                 }
             }
         }
+    }
+
+    &.footer-small {
+        height: 40px;
+        color: $white;
+        position: relative;
     }
 }
 

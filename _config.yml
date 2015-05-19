@@ -11,7 +11,6 @@ owner:
   github:         trevorjtclarke
   disqus:         es6aday
   location:       "Irvine, CA"
-  # Plug in your disqus shortname!
 
 tools:
   standards:      "HTML, SCSS, Jekyll"
@@ -22,6 +21,8 @@ tools:
 links:
   - title: About
     url: /about
+  - title: Editor 
+    url: /editor.html
   - title: Collaborate!
     url: https://github.com/sum37/es6aday.github.io
     external: true

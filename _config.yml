@@ -23,9 +23,9 @@ links:
     url: /about
   - title: Editor 
     url: /editor.html
-  - title: Collaborate!
-    url: https://github.com/sum37/es6aday.github.io
-    external: true
+  # - title: Collaborate!
+  #   url: https://github.com/sum37/es6aday.github.io
+  #   external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York

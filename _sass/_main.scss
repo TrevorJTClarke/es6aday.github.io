@@ -15,6 +15,20 @@
     }
 }
 
+.timer {
+	width: 40px;
+	height: 14px;
+	margin: 0 40px 0 20px;
+
+	svg {
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		top: -5px;
+		right: -40px;
+	}
+}
+
 .post-item {
 	background: $white;
 	border: 1px solid rgba(0,0,0,0.1);

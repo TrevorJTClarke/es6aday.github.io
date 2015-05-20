@@ -1,32 +1,5 @@
 /* Mobile Responsive 
 ========================================================================== */
-
-@media only screen and (max-width: 500px) {
-    footer {
-    
-    .social {
-        display: none;
-    }
-    
-    aside {
-        width: 90%;
-        margin: 0 auto;
-    }
-    
-    .prev-posts {
-        @include column(9);
-        padding-left: 0;
-        float: none;
-        margin: 0 auto;
-        display: block;
-        li {
-            margin-top: $lh/2;
-        }
-    }
-    
-    }
-}
-
 @media only screen and (max-width : 680px) {
  
  /* All Posts */
@@ -147,12 +120,67 @@
     float: none;
 }
 
-footer {
-    font-size: $fs5;
-}
-
 small {
     font-size: $fs6;
+}
+
+
+
+footer {
+  font-size: $fs5;
+
+.social {
+    display: none;
+}
+
+aside {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.prev-posts {
+    @include column(9);
+    padding-left: 0;
+    float: none;
+    margin: 0 auto;
+    display: block;
+    li {
+        margin-top: $lh/2;
+    }
+}
+
+}
+
+// featured Sections
+.ft-challenge {
+    width: 90%;
+    margin-left: -45%;
+}
+.ft-timer-count {
+    padding: 0;
+
+    h3 {
+        font-size: 40px;
+    }
+
+    i {
+        font-size: 40px;
+    }
+
+    .btn-start {
+        font-size: 30px;
+        float: none;
+        padding: 17px 40px;
+        margin: 20px 0 0;
+        width: 100%;
+    }
+}
+
+
+// recent posts
+.post-item {
+    margin:0 20px 30px;
+    width: 100%;
 }
 
 }

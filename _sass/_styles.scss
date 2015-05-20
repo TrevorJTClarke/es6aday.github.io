@@ -180,6 +180,7 @@ input {
     min-height: 100%;
     height: auto;
     margin: 0 auto -$footerHeight;
+    overflow: hidden;
 }
 
 .wrap {
@@ -238,15 +239,15 @@ input {
         position: relative;
         top: 0;
         z-index: -1;
+
         img {
             max-height: 800px;
         }
 
         &.main-feat {
             height: 70vh;
-            // background: url("/images/yellow_triangles.png") left top repeat;
-            // background-size:75%;
             background: #F9F0C1;
+            z-index: 10;
         }
     }
     

@@ -7,7 +7,7 @@ tags: [ES6, blog, Javascript, Arrows, Lexical]
 comments: true
 date: 2015-05-13
 reference: https://babeljs.io/docs/learn-es6/#arrows
-fnpreview: "((v, i) => { return v + i })"
+fnpreview: "((v, i) => v + i)"
 ---
 In trying to understand use cases of "this", I setup the following scenarios:
 

@@ -13,9 +13,16 @@
 @import "type";
 @import "buttons";
 @import "styles";
+@import "header";
+@import "footer";
 @import "highlights";
 @import "featured";
 @import "main";
+@import "editor";
+
+
+@import "responsive_tablet";
+@import "responsive_mobile";
 
 // Remove the definition below for a pixel-based layout
 $total-width: 100%;

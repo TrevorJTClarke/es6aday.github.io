@@ -1,0 +1,31 @@
+{% include head-dark.html %}
+<div class="es-editor">
+<!-- <div class="editor" id="editor">function foo(items) {
+    var x = "All this is syntax highlighted";
+    return x;
+}</div> -->
+
+    <div class="babel-repl-editor babel-repl-input"><div class="ace_editor"></div></div>
+    <div class="babel-repl-editor babel-repl-output"><div class="ace_editor"></div></div>
+    <div class="babel-repl-reporter babel-repl-errors"></div>
+    <div class="babel-repl-reporter babel-repl-console"></div>
+</div>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+<script src="assets/js/babel.js"></script>
+<script src="assets/js/repl.js"></script>
+<script>
+    // var editor = ace.edit("editor");
+    // editor.setTheme("ace/theme/monokai");
+    // editor.getSession().setMode("ace/mode/javascript");
+</script>
+
+  <footer class="footer-small">
+    <small>&copy; {{ site.time | date: '%Y' }} {{ site.owner.name }}</small>
+  </footer>
+
+  <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-62340913-6', 'auto'); ga('send', 'pageview');</script>
+  </body>
+</html>

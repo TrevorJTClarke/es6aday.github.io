@@ -1,0 +1,66 @@
+/* Tablet
+========================================================================== */
+
+@media only screen and (max-width: $breakpoint-2-max-width) {
+    
+// Type Fixes
+
+h1 {
+    font-size: $fs2;
+}
+
+blockquote, blockquote p {
+    font-size: $fs3;
+}
+
+footer {
+    font-size: $fs5;
+    
+    .prev-posts {
+        li  {
+          
+          .recent-title {
+              
+          }
+          
+          span.date {
+              font-size: $fs6;
+          }  
+        }
+    }
+    
+    .social {
+        right: 10vw;
+    }
+}
+
+
+// featured Sections
+.ft-challenge {
+    width: 90%;
+    margin-left: -45%;
+}
+.ft-timer-count {
+
+    h3 {
+        font-size: 40px;
+    }
+
+    i {
+        font-size: 40px;
+    }
+
+    .btn-start {
+        font-size: 30px;
+        padding: 17px 40px;
+    }
+}
+
+
+// recent posts
+.post-item {
+    margin:0 1.5% 30px;
+    width: 47%;
+}
+    
+}

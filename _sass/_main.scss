@@ -1,28 +1,43 @@
 /* Home Page styling */
 .main-posts {
     max-width: 960px;
-    @include column(10);
-    display: block;
-    float: none;
-    margin: 80px auto 0;
-    @include clearfix;
-    overflow: hidden;
+    width: 100%;
+    // display: flex;
+    margin: 120px auto 0;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    z-index: 10;
 
     h2 {
     	text-align: center;
     	margin: 0 0 40px;
+    	width: 100%;
     }
+}
+
+.timer {
+	width: 40px;
+	height: 14px;
+	margin: 0 40px 0 20px;
+
+	svg {
+		cursor: pointer;
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		top: -5px;
+		right: -40px;
+	}
 }
 
 .post-item {
 	background: $white;
 	border: 1px solid rgba(0,0,0,0.1);
 	@include br(4px);
-	@include column(3.2);
-	display:inline-block;
-	vertical-align:top;
-	padding:0;
-	min-height: 210px;
+	padding:0 0 30px;
+	margin:0 1.5% 30px;
+	position: relative;
+	width: 30%;
 
 	.snippet {
 		display: block;
@@ -55,5 +70,7 @@
 		width: 100%;
 		text-align: right;
 		padding: 10px;
+		position: absolute;
+		bottom: 0;
 	}
 }

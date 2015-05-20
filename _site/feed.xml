@@ -5,13 +5,124 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2015-05-18T12:36:05-04:00</updated>
+<updated>2015-05-20T15:39:36-04:00</updated>
 <id>/</id>
 <author>
   <name>Sum 37</name>
   <uri>/</uri>
   <email>sum37apps@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[WeakSet, WeakMap]]></title>
+  <link rel="alternate" type="text/html" href="/articles/WeakSet-WeakMap" />
+  <id>/articles/WeakSet-WeakMap</id>
+  <published>2015-05-20T00:00:00-04:00</published>
+  <updated>2015-05-20T00:00:00-04:00</updated>
+  <author>
+    <name>Sum 37</name>
+    <uri></uri>
+    <email>sum37apps@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;With WeakMap, the API is similar to Map and Set except you cannot iterate on data inside, and all data must be arbitrary. WeakMap is best suited for private methods where you know both the WeakMap and Keys.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Creates a WeakMap&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;WeakMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;for-weakmap-here-are-the-available-methods&quot;&gt;For WeakMap, here are the available methods:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;set - method to add data to a Map with its key name and value&lt;/li&gt;
+  &lt;li&gt;get - method to retrieve data from a Map by its key name&lt;/li&gt;
+  &lt;li&gt;delete - removes data by key&lt;/li&gt;
+  &lt;li&gt;has - method to access data inside a Map from its key name, returns boolean&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;note-if-weakmap-had-the-method-clear-for-example-it-would-be-a-security-risk-see-tc39-resolutionhttpsgithubcomrwaldrontc39-notesblobmasteres62014-11nov-19md412-should-weakmapweakset-have-a-clear-method-markm&quot;&gt;&lt;em&gt;NOTE:&lt;/em&gt; If WeakMap had the method &lt;strong&gt;clear&lt;/strong&gt; for example, it would be a security risk. See &lt;a href=&quot;https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-11/nov-19.md#412-should-weakmapweakset-have-a-clear-method-markm&quot;&gt;TC39 Resolution&lt;/a&gt;&lt;/h5&gt;
+
+&lt;h3 id=&quot;findings&quot;&gt;Findings:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.2ality.com/2015/01/es6-maps-sets.html&quot;&gt;2ality&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/articles/WeakSet-WeakMap&quot;&gt;WeakSet, WeakMap&lt;/a&gt; was originally published by Sum 37 at &lt;a href=&quot;&quot;&gt;ES6 A Day&lt;/a&gt; on May 20, 2015.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Maps, A Collection Helper]]></title>
+  <link rel="alternate" type="text/html" href="/articles/Maps-A-Collection-Helper" />
+  <id>/articles/Maps-A-Collection-Helper</id>
+  <published>2015-05-19T00:00:00-04:00</published>
+  <updated>2015-05-19T00:00:00-04:00</updated>
+  <author>
+    <name>Sum 37</name>
+    <uri></uri>
+    <email>sum37apps@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Take a look at the dynamics of Map:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Creates a Map&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Add things into the Map, anything you want&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;hey you&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Strange thing, need to find a good use case for this&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({},&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Object as a key&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+
+&lt;span class=&quot;c1&quot;&gt;// Could be a nice default value&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NaN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;default&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Another great thing to note, chaining methods:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;hey you&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;has&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Map methods are very similar to Set, only the structure of storing/retrieving items is different.&lt;/p&gt;
+
+&lt;h3 id=&quot;here-are-the-methods&quot;&gt;Here are the methods:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;set - method to add data to a Map with its key name and value&lt;/li&gt;
+  &lt;li&gt;get - method to retrieve data from a Map by its key name&lt;/li&gt;
+  &lt;li&gt;clear - removes all data within the Map&lt;/li&gt;
+  &lt;li&gt;delete - removes data by key&lt;/li&gt;
+  &lt;li&gt;has - method to access data inside a Map from its key name, returns boolean&lt;/li&gt;
+  &lt;li&gt;keys - returns all keys available inside the Map&lt;/li&gt;
+  &lt;li&gt;size - the amount of the items within the Map, similar to &lt;em&gt;Array.length&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;values - returns all values available inside the Map&lt;/li&gt;
+  &lt;li&gt;entries - returns an Array of key/value pairs of any items defined in the Map&lt;/li&gt;
+  &lt;li&gt;forEach - iteration similar to &lt;em&gt;Array.forEach&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;findings&quot;&gt;Findings:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Since Map handles collection data, Map can be used extensively for functions that need more flexibility in data stored.&lt;/li&gt;
+  &lt;li&gt;Map could be used for a config contract, the interface makes this a prime candidate for a better data object.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.2ality.com/2015/01/es6-maps-sets.html&quot;&gt;2ality&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/articles/Maps-A-Collection-Helper&quot;&gt;Maps, A Collection Helper&lt;/a&gt; was originally published by Sum 37 at &lt;a href=&quot;&quot;&gt;ES6 A Day&lt;/a&gt; on May 19, 2015.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>

@@ -1,0 +1,186 @@
+/* Mobile Responsive 
+========================================================================== */
+@media only screen and (max-width : 680px) {
+ 
+ /* All Posts */
+      
+  section.article img.loading {
+    top: 10px !important;
+    right: 6%;
+    left: inherit;
+  }
+  
+  
+  header.site-header {
+    min-height: 59px;
+    margin-top: 20px;
+    padding-top: 0;
+  }
+  
+  header.site-header hgroup h1 {
+    margin-bottom: 0;
+    font-size: $fsp;
+  }
+  
+  header.site-header hgroup {
+    position: absolute;
+    left: 7%;
+    float: none;
+    padding-left: 0;
+  }
+  
+  header.site-header a.menu {
+    position: absolute;
+    right: 7%;
+    display: block;
+    float: right;
+    width: 16px;
+    height: 16px;
+    color: white;
+    .icons {
+        font-size: 32px;
+    }
+  }
+  
+  header.site-header a.menu img {
+    width: 24px;
+    height: auto;
+  }
+  
+  header.site-header nav {
+    display: none;
+    float: none;
+    width: 100%;
+    padding-right: 0;
+  }
+  
+  header.site-header nav:before {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  
+  header.site-header nav ul {
+    padding: 20px 0 10px 0;
+    margin-top: 15px;
+  }
+  
+  header.site-header nav ul li {
+    display: block;
+    margin-left: 0;
+    top: 0px;
+    font-size: $fs5;
+  }
+  
+  header.site-header nav ul li a {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    padding: 15px 0px;
+    padding-right: 7%;
+    position: relative;
+    width: 100%;
+    color: $white;
+    &:active {
+      background-color: $link;
+      color: white;  
+    }
+    &:hover {
+        text-shadow: none;
+    }
+  }
+  
+  #bump .darken nav ul {
+          padding: 0;
+          margin-top: 40px;
+          background: $black;
+      }
+      
+   #bump .darken nav ul li a {
+        color: $white;
+        &:active {
+          background-color: $link;
+        }
+        &:hover {
+            text-shadow: none;
+            color: $white;
+            background-color: $link;
+        }
+    }
+
+}
+
+@media only screen and (max-width: $breakpoint-1-max-width) {
+
+.post {
+    @include column(9);
+    max-width: 420px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+}
+
+small {
+    font-size: $fs6;
+}
+
+
+
+footer {
+  font-size: $fs5;
+
+.social {
+    display: none;
+}
+
+aside {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.prev-posts {
+    @include column(9);
+    padding-left: 0;
+    float: none;
+    margin: 0 auto;
+    display: block;
+    li {
+        margin-top: $lh/2;
+    }
+}
+
+}
+
+// featured Sections
+.ft-challenge {
+    width: 90%;
+    margin-left: -45%;
+}
+.ft-timer-count {
+    padding: 0;
+
+    h3 {
+        font-size: 40px;
+    }
+
+    i {
+        font-size: 40px;
+    }
+
+    .btn-start {
+        font-size: 30px;
+        float: none;
+        padding: 17px 40px;
+        margin: 20px 0 0;
+        width: 100%;
+    }
+}
+
+
+// recent posts
+.post-item {
+    margin:0 20px 30px;
+    width: 100%;
+}
+
+}

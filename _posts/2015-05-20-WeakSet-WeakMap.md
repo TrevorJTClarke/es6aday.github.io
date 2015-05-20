@@ -5,12 +5,12 @@ description: Associate data with objects without having to worry about memory le
 categories: articles
 tags: [ES6, blog, Javascript, Maps, JS Map, Array vs Map]
 comments: true
-date: 2015-05-19
+date: 2015-05-20
 reference: http://www.2ality.com/2015/01/es6-maps-sets.html
 fnpreview: "let wm = new WeakMap()"
 ---
 
-With WeakMap, the API is similar except you cannot iterate on data inside, and all data must be arbitrary. WeakMap is best suited for private methods where you know both the WeakMap and Keys.
+With WeakMap, the API is similar to Map and Set except you cannot iterate on data inside, and all data must be arbitrary. WeakMap is best suited for private methods where you know both the WeakMap and Keys.
 
 {% highlight js %}
 // Creates a WeakMap

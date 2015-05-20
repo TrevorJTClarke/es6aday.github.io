@@ -5,7 +5,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2015-05-20T15:31:21-04:00</updated>
+<updated>2015-05-20T15:39:36-04:00</updated>
 <id>/</id>
 <author>
   <name>Sum 37</name>
@@ -18,14 +18,14 @@
   <title type="html"><![CDATA[WeakSet, WeakMap]]></title>
   <link rel="alternate" type="text/html" href="/articles/WeakSet-WeakMap" />
   <id>/articles/WeakSet-WeakMap</id>
-  <published>2015-05-19T00:00:00-04:00</published>
-  <updated>2015-05-19T00:00:00-04:00</updated>
+  <published>2015-05-20T00:00:00-04:00</published>
+  <updated>2015-05-20T00:00:00-04:00</updated>
   <author>
     <name>Sum 37</name>
     <uri></uri>
     <email>sum37apps@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;With WeakMap, the API is similar except you cannot iterate on data inside, and all data must be arbitrary. WeakMap is best suited for private methods where you know both the WeakMap and Keys.&lt;/p&gt;
+  <content type="html">&lt;p&gt;With WeakMap, the API is similar to Map and Set except you cannot iterate on data inside, and all data must be arbitrary. WeakMap is best suited for private methods where you know both the WeakMap and Keys.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Creates a WeakMap&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;WeakMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -53,7 +53,7 @@
   &lt;li&gt;&lt;a href=&quot;http://www.2ality.com/2015/01/es6-maps-sets.html&quot;&gt;2ality&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/articles/WeakSet-WeakMap&quot;&gt;WeakSet, WeakMap&lt;/a&gt; was originally published by Sum 37 at &lt;a href=&quot;&quot;&gt;ES6 A Day&lt;/a&gt; on May 19, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/articles/WeakSet-WeakMap&quot;&gt;WeakSet, WeakMap&lt;/a&gt; was originally published by Sum 37 at &lt;a href=&quot;&quot;&gt;ES6 A Day&lt;/a&gt; on May 20, 2015.&lt;/p&gt;</content>
 </entry>
 
 

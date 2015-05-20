@@ -1,0 +1,38 @@
+/* Tablet
+========================================================================== */
+
+@media only screen and (max-width: $breakpoint-2-max-width) {
+    
+// Type Fixes
+
+h1 {
+    font-size: $fs2;
+}
+
+blockquote, blockquote p {
+    font-size: $fs3;
+}
+
+footer {
+    font-size: $fs5;
+    
+    .prev-posts {
+        li  {
+          
+          .recent-title {
+              
+          }
+          
+          span.date {
+              font-size: $fs6;
+          }  
+        }
+    }
+    
+    .social {
+        right: 10vw;
+    }
+}
+    
+    
+}

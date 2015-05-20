@@ -16,7 +16,7 @@ Take a look at the dynamics of Map:
 // Creates a Map
 let m = new Map()
 
-// Add things into the Set, anything you want
+// Add things into the Map, anything you want
 m.add("hello", "hey you")
 
 // Strange thing, need to find a good use case for this
@@ -42,7 +42,8 @@ Map methods are very similar to Set, only the structure of storing/retrieving it
 
 ### Here are the methods: 
 
-* add - method to add data to a Map with its key name and value
+* set - method to add data to a Map with its key name and value
+* get - method to retrieve data from a Map by its key name
 * clear - removes all data within the Map
 * delete - removes data by key
 * has - method to access data inside a Map from its key name, returns boolean
